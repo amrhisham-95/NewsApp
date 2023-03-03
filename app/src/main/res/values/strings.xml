@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="imageOfMainIcon">TODO</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="enter_your_password">Enter Your Password</string>
+    <string name="signin">SignIn</string>
+    <string name="signup">SIGNUP</string>
+    <string name="button">Button</string>
+    <string name="or">OR</string>
+    <string name="todo">TODO</string>
+    <string name="todo1">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="todo4">TODO</string>
+    <string name="todo5">TODO</string>
+    <string name="google">GOOGLE</string>
+    <string name="facebook">FACEBOOK</string>
+    <string name="twitter">TWITTER</string>
+    <string name="todo55">TODO</string>
+    <string name="todo6">TODO</string>
+    <string name="todo7">TODO</string>
+    <string name="phone">TODO</string>
+    <string name="tododfsdf">TODO</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="welcomeBody">This app displays daily news in different countries and a variety of sources,There are three main topics (Sports-Live-Sciences) ,  If you want to search about other topic such as:Historical News choose other topic,Press tart below and browse the world.</string>
+    <string name="topics">- general -business -entertainment -health -science -sports -technology</string>
+    <string name="instructionsText">Please When You Enter The Date, You Must Write It with This Formula : YYYY-MM-ddThh:mm:ssZ , And Select the Country and its Language, Finally, The Topic You Want, Press SHOW NEWS to display the news, If you want to return back, Press Back, Thank You.</string>
+    <string name="refreshBtnText">Refresh</string>
+    <string name="there_is_no_data_for_this_topic_now">There is no Data for this topic, NOW!</string>
+    <string name="spinnercontentdescription">spinnerContentDescription</string>
+    <string name="there_are_no_news_for_this_topic_now">There Are No News For This Topic, Now</string>
+    <string name="back">Back</string>
+    <string name="show_news">Show News</string>
+    <string name="timeFormula">ex : YYYY-MM-DDT13:00:00Z</string>
+    <string name="general_live_news">General Live News</string>
+    <string name="science_news">Science News</string>
+    <string name="sports_news">Sports News</string>
+    <string name="other_topics_news">Other Topics News</string>
+    <string name="floatingcontentdescriptio">floatingContentDescriptio</string>
+    <string name="floatingdescription">floatingDescription</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="languages">Languages</string>
+    <string name="countries">Countries</string>
+    <string name="category">Category</string>
+    <string name="orr">Or</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="email_addresss">Email Address</string>
+    <string name="passwordd">Password</string>
+    <string name="start">Start</string>
+
+
+    <string-array name="countriesSpinner">
+            <item>SELECT THE COUNTRY</item>
+            <item>EGYPT</item>
+            <item>USA</item>
+            <item>UNITED-KINGDOM</item>
+            <item>ITALY</item>
+            <item>GERMAN</item>
+            <item>CHINA</item>
+            <item>FRANCE</item>
+        </string-array>
+
+    <string-array name="languagesSpinner">
+        <item>SELECT THE LANGUAGE Of THE SELECTED COUNTRY</item>
+        <item>ARABIC</item>
+        <item>ENGLISH</item>
+        <item>GERMANY</item>
+        <item>FRENCH</item>
+        <item>CHINESE</item>
+        <item>ITALIAN</item>
+    </string-array>
+
+    <string-array name="categoriesSpinner">
+        <item>SELECT THE TOPIC</item>
+        <item>SPORTS</item>
+        <item>SCIENCES</item>
+        <item>GENERAL</item>
+        <item>BUSINESS</item>
+        <item>ENTERTAINMENT</item>
+        <item>HEALTH</item>
+        <item>TECHNOLOGY</item>
+        <item>NATION</item>
+        <item>WORLD</item>
+    </string-array>
+
+
+</resources>

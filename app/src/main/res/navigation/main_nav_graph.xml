@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph.xml"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.newsapp.fragments.LoginFragment"
+        android:label="Login Page"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_signUpEmailAndPasswordFragment"
+            app:destination="@id/signUpEmailAndPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_phoneNumberSignInFragment"
+            app:destination="@id/phoneNumberSignInFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpEmailAndPasswordFragment"
+        android:name="com.example.newsapp.fragments.SignUpEmailAndPasswordFragment"
+        android:label="SignUp Page"
+        tools:layout="@layout/fragment_sign_up_email_and_password">
+        <action
+            android:id="@+id/action_signUpEmailAndPasswordFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneNumberSignInFragment"
+        android:name="com.example.newsapp.fragments.PhoneNumberSignInFragment"
+        android:label="Sign In By Phone Number"
+        tools:layout="@layout/fragment_phone_number_sign_in">
+        <action
+            android:id="@+id/action_phoneNumberSignInFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.newsapp.fragments.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/fragment_welcome"/>
+</navigation>

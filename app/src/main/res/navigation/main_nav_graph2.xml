@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph2.xml"
+    app:startDestination="@id/newsFragment">
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.newsapp.fragments.NewsFragment"
+        android:label="NewsFragment"
+        tools:layout="@layout/fragment_news">
+        <action
+            android:id="@+id/action_newsFragment_to_otherTopicFragment"
+            app:destination="@id/otherTopicFragment" />
+        <action
+            android:id="@+id/action_newsFragment_to_detailSciencesFragment"
+            app:destination="@id/detailSciencesFragment" />
+        <action
+            android:id="@+id/action_newsFragment_to_detailSportsFragment"
+            app:destination="@id/detailSportsFragment" />
+        <action
+            android:id="@+id/action_newsFragment_to_detailLiveFragment"
+            app:destination="@id/detailLiveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailLiveFragment"
+        android:name="com.example.newsapp.fragments.DetailLiveFragment"
+        android:label="DetailLiveFragment"
+        tools:layout="@layout/fragment_detail_live">
+        <action
+            android:id="@+id/action_detailLiveFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_detailLiveFragment_to_shortcutsFragment"
+            app:destination="@id/shortcutsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailSciencesFragment"
+        android:name="com.example.newsapp.fragments.DetailSciencesFragment"
+        android:label="DetailSciencesFragment"
+        tools:layout="@layout/fragment_detail_sciences">
+        <action
+            android:id="@+id/action_detailSciencesFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_detailSciencesFragment_to_shortcutsFragment"
+            app:destination="@id/shortcutsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailSportsFragment"
+        android:name="com.example.newsapp.fragments.DetailSportsFragment"
+        android:label="DetailSportsFragment"
+        tools:layout="@layout/fragment_detail_sports">
+        <action
+            android:id="@+id/action_detailSportsFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_detailSportsFragment_to_shortcutsFragment"
+            app:destination="@id/shortcutsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otherTopicFragment"
+        android:name="com.example.newsapp.fragments.OtherTopicFragment"
+        android:label="OtherTopicFragment"
+        tools:layout="@layout/fragment_other_topic">
+        <action
+            android:id="@+id/action_otherTopicFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_otherTopicFragment_to_shortcutsFragment"
+            app:destination="@id/shortcutsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shortcutsFragment"
+        android:name="com.example.newsapp.fragments.ShortcutsFragment"
+        android:label="ShortcutsFragment"
+        tools:layout="@layout/fragment_shortcuts">
+        <action
+            android:id="@+id/action_shortcutsFragment_to_otherTopicFragment"
+            app:destination="@id/otherTopicFragment" />
+        <action
+            android:id="@+id/action_shortcutsFragment_to_detailLiveFragment"
+            app:destination="@id/detailLiveFragment" />
+        <action
+            android:id="@+id/action_shortcutsFragment_to_detailSciencesFragment"
+            app:destination="@id/detailSciencesFragment" />
+        <action
+            android:id="@+id/action_shortcutsFragment_to_detailSportsFragment"
+            app:destination="@id/detailSportsFragment" />
+        <argument
+            android:name="liveVariable"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="sportsVariable"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="sciencesVariable"
+            app:argType="integer"
+            android:defaultValue="2" />
+        <argument
+            android:name="otherTopicsVariable"
+            app:argType="integer"
+            android:defaultValue="3" />
+    </fragment>
+</navigation>

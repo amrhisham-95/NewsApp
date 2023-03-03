@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.newsapp.viewModels.RetrofitViewModel" />
+        <variable
+            name="roomViewModel"
+            type="com.example.newsapp.viewModels.RoomDatabaseViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.DetailSportsFragment">
+
+        <TextView
+            android:id="@+id/noDataTextDetailSports"
+            style="@style/noDataDetailTextStyle"
+            android:text="@string/there_are_no_news_for_this_topic_now"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline41" />
+
+        <Button
+            android:id="@+id/backBtnSports"
+            android:text="@string/back"
+            style="@style/backButtonsStyle"
+            app:layout_constraintBottom_toTopOf="@+id/guideline41"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline48"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/ShowNewsBtnSports"
+            style="@style/ShowButtonsStyle"
+            android:contentDescription="@string/button"
+            app:layout_constraintBottom_toTopOf="@+id/guideline41"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline48"
+            tools:ignore="RedundantDescriptionCheck,VisualLintButtonSize" />
+
+        <EditText
+            android:id="@+id/startEnterDateSports"
+            style="@style/editTextsStyle"
+            android:hint="@string/timeFormula"
+            app:layout_constraintBottom_toTopOf="@+id/guideline39"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline40"
+            app:layout_constraintTop_toTopOf="@+id/guideline47"
+            tools:ignore="DuplicateSpeakableTextCheck,VisualLintTextFieldSize"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/endEnterDateSports"
+            android:hint="@string/timeFormula"
+            style="@style/editTextsStyle"
+            app:layout_constraintBottom_toTopOf="@+id/guideline42"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline40"
+            app:layout_constraintTop_toTopOf="@+id/guideline39"
+            android:importantForAutofill="no"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <Spinner
+            android:id="@+id/spinnerLanguagesSports"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/spinnercontentdescription"
+            app:layout_constraintBottom_toTopOf="@+id/guideline43"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline40"
+            app:layout_constraintTop_toTopOf="@+id/guideline42"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Spinner
+            android:id="@+id/countriesSpinnerSports"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/spinnercontentdescription"
+            app:layout_constraintBottom_toTopOf="@+id/guideline48"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline40"
+            app:layout_constraintTop_toTopOf="@+id/guideline43" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView7"
+            style="@style/TitleOfPageStyle"
+            app:layout_constraintBottom_toTopOf="@+id/guideline47"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/topicsEnterSports"
+                style="@style/titleText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EFEFEF"
+                android:ems="10"
+                android:gravity="center"
+                android:text="@string/sports_news"
+                android:textSize="30sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.18" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.26" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.34" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/instructionsFloatingSports"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline45"
+            app:layout_constraintTop_toTopOf="@+id/guideline44"
+            style="@style/floatingStyle"
+            android:contentDescription="@string/floatingcontentdescriptio"
+            tools:ignore="VisualLintBounds" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+
+        <TextView
+            android:id="@+id/startDateSports"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:text="@string/start_date"
+            android:background="#EFEFEF"
+            android:textAlignment="center"
+            android:textColor="#565656"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/guideline39"
+            app:layout_constraintEnd_toStartOf="@+id/guideline40"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline47" />
+
+        <TextView
+            android:id="@+id/endDateSports"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="@string/end_date"
+            android:background="#EFEFEF"
+            android:textAlignment="center"
+            android:textColor="#565656"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/guideline42"
+            app:layout_constraintEnd_toStartOf="@+id/guideline40"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline39" />
+
+        <TextView
+            android:id="@+id/languagesSports"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:background="#EFEFEF"
+            android:text="@string/languages"
+            android:textAlignment="center"
+            android:textColor="#565656"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/guideline43"
+            app:layout_constraintEnd_toStartOf="@+id/guideline40"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline42" />
+
+        <TextView
+            android:id="@+id/countriesSports"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="@string/countries"
+            android:background="#EFEFEF"
+            android:textAlignment="center"
+            android:textColor="#565656"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/guideline48"
+            app:layout_constraintEnd_toStartOf="@+id/guideline40"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline43" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.53" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDetailSports"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline41"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline47"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.43" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

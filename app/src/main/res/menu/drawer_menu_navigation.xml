@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <item android:title="Topics">
+        <menu>
+        <item
+        android:id="@+id/Live"
+        android:title=" Extra Live News"
+        android:icon="@drawable/newss"/>
+
+    <item
+        android:id="@+id/Sports"
+        android:title="Extra Sports News"
+        android:icon="@drawable/snowboarding"/>
+
+    <item
+        android:id="@+id/Sciences"
+        android:title="Extra Sciences News"
+        android:icon="@drawable/logic"/>
+
+    <item
+        android:id="@+id/OtherTopics"
+        android:title="Other Topics"
+        android:icon="@drawable/lock"/>
+        </menu>
+
+    </item>
+
+
+    <item android:title="Sign Out">
+        <menu>
+            <item android:id="@+id/signOut"
+                android:title="Sign in with another Account"
+                android:icon="@drawable/arrow"/>
+
+        </menu>
+    </item>
+
+
+</menu>

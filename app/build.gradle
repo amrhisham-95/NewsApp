@@ -1,0 +1,139 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+    id 'kotlin-kapt'
+    //safeArguments For (Navigation)
+    id 'androidx.navigation.safeargs.kotlin'
+    //For Parcelizing
+    id 'kotlin-parcelize'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.newsapp'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.newsapp"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+     buildFeatures{
+         dataBinding true
+         viewBinding true
+     }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //For Navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+
+    //for Maps
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+
+    //for firebase (google)
+    implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
+
+    //For Navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+
+
+    //for firebase
+    implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
+    implementation 'com.google.firebase:firebase-auth-ktx:21.1.0'
+
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:31.2.2')
+    // Add the dependency for the Firebase Authentication library
+    implementation 'com.google.firebase:firebase-auth-ktx'
+
+
+    implementation platform('com.google.firebase:firebase-bom:31.2.2')
+
+    //activity androidX - viewModel
+    implementation "androidx.activity:activity-ktx:1.6.1"
+    //fragment androidX - viewModel
+    implementation "androidx.fragment:fragment-ktx:1.5.5"
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    //Json converter
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    //Json To Kotlin Library
+    implementation 'com.sealwu.jsontokotlin:library:3.7.4'
+
+    //RXJava
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
+    //RX Android
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
+    //Adapter for RXJava3
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+
+    //liveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
+
+    // Room components
+    implementation "androidx.room:room-runtime:2.5.0"
+    kapt "androidx.room:room-compiler:2.5.0"
+    implementation "androidx.room:room-ktx:2.5.0"
+    androidTestImplementation "androidx.room:room-testing:2.5.0"
+
+    // Lifecycle components
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+
+    // Download and parse data
+    implementation "com.squareup.moshi:moshi:1.11.0"
+    implementation "com.squareup.moshi:moshi-kotlin:1.11.0"
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+
+    // Image downloader
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // Kotlin coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2"
+
+
+    // Work manager
+    implementation "androidx.work:work-runtime-ktx:2.8.0"
+
+}
