@@ -4,7 +4,7 @@ Show News For Three Main Topics (Live News - Sports News - Science News)
 
 -Load News from GNews by API.
 
--The application displays live news by default in two languages: English for America and the United Kingdom and Arabic for Egypt. 
+-The application displays live news by default in two languages: English for America and the United Kingdom and  Arabic for Egypt. 
 
 -You can Also search for News by Four Main Data: Topics and Date and Languages and Countries.
 ## Screenshots
