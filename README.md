@@ -9,6 +9,7 @@ The application was built based on the following:
 1.Architecture Pattern : MVVM (Model-View-ViewModel)  is used in this project.
 2.The DiffUtil Recycler Adapter is used To update data automatically and more flexiblyز
 3.I Used TabLayout, Navigation Drawer, and also Menu in this app.
+4.I connect the app with Firebase for Sign in & sign up by two ways: Email&Password Or Google.
 #Requirements
 Create Gnews API Key from website First (https://gnews.io/).
 #Installation
