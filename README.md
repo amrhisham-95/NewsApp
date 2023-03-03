@@ -4,6 +4,14 @@ Show News For Three Main Topics (Live News - Sports News - Science News)
 Load News from GNews by API.
 The application displays live news by default in two languages: English for America and the United Kingdom and Arabic for Egypt. 
 You can Also search for News by Four Main Data: Topics and Date and Languages and Countries.
+## Screenshots
+![1](https://user-images.githubusercontent.com/106347370/222622778-be2a57b6-78c5-43bb-b440-f31c29453465.png)
+![2](https://user-images.githubusercontent.com/106347370/222622783-26b7b6c3-79b1-40c0-a79c-6d01a3a36259.png)
+![3](https://user-images.githubusercontent.com/106347370/222622784-a7f18d54-bb92-490f-833d-d89d432b524b.png)
+![4](https://user-images.githubusercontent.com/106347370/222622786-9776dc77-3065-447e-b146-ba20a038e796.png)
+![5](https://user-images.githubusercontent.com/106347370/222622787-d86a4570-f1d5-49ec-96f8-b04279bd7e3f.png)
+![6](https://user-images.githubusercontent.com/106347370/222622788-848307cd-4844-4049-9de4-53793c1f948f.png)
+
 ## Architecture
 The application was built based on the following: 
 1.Architecture Pattern : MVVM (Model-View-ViewModel)  is used in this project.
