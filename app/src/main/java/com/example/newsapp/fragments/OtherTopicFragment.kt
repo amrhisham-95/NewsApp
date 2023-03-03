@@ -271,9 +271,9 @@ class OtherTopicFragment : Fragment(), OnRecyclerViewClick {
 
     private fun categoriesSpinnerOtherTopics(){
 
-        val mySpinnerAdapter = ArrayAdapter.createFromResource(requireContext(),R.array.languagesSpinner,android.R.layout.simple_spinner_item)
+        val mySpinnerAdapter = ArrayAdapter.createFromResource(requireContext(),R.array.categoriesSpinner,android.R.layout.simple_spinner_item)
 
-        binding.spinnerLanguagesOtherTopics.apply {
+        binding.categoriesSpinnerOtherTopics.apply {
             adapter=mySpinnerAdapter
             onItemSelectedListener= object : AdapterView.OnItemSelectedListener{
                 override fun onItemSelected(
