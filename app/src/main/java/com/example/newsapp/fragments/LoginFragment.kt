@@ -45,26 +45,38 @@ class LoginFragment : Fragment() {
         auth = Firebase.auth
 
         binding.imageButtonSignIn.setOnClickListener {
-            auth.signInWithEmailAndPassword(
-                binding.editTextEmail.text.toString().trim(),
-                binding.editTextPassword.text.toString().trim()
-            )
-                .addOnCompleteListener(requireActivity()) { task ->
-                    if (task.isSuccessful) {
-                        // Sign in success, update UI with the signed-in user's information
-                        Toast.makeText(requireContext(), "signInWithEmail:success", Toast.LENGTH_LONG)
-                            .show()
-                        val user = auth.currentUser
-                        findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
-                        updateUI(user)
-                    } else {
-                        // If sign in fails, display a message to the user.
-                        Toast.makeText(requireContext(), "signInWithEmail:failure", Toast.LENGTH_LONG)
-                            .show()
+            if(binding.editTextEmail.text.isEmpty() || binding.editTextPassword.text.isEmpty()) {
+                Toast.makeText(requireContext(),"Please Enter The Empty Square",Toast.LENGTH_LONG).show()
+            }else {
+                auth.signInWithEmailAndPassword(
+                    binding.editTextEmail.text.toString().trim(),
+                    binding.editTextPassword.text.toString().trim()
+                )
+                    .addOnCompleteListener(requireActivity()) { task ->
+                        if (task.isSuccessful) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Toast.makeText(
+                                requireContext(),
+                                "signInWithEmail:success",
+                                Toast.LENGTH_LONG
+                            )
+                                .show()
+                            val user = auth.currentUser
+                            findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+                            updateUI(user)
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Toast.makeText(
+                                requireContext(),
+                                "signInWithEmail:failure",
+                                Toast.LENGTH_LONG
+                            )
+                                .show()
 
-                        updateUI(null)
+                            updateUI(null)
+                        }
                     }
-                }
+            }
         }
 
         binding.signUpText.setOnClickListener {

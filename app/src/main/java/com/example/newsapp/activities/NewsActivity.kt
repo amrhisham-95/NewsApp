@@ -17,8 +17,6 @@ import com.example.newsapp.ui.MainActivity
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-
-
 class NewsActivity : AppCompatActivity() , DrawerLocker {
     private lateinit var binding: ActivityNewsBinding
     private lateinit var toggle: ActionBarDrawerToggle

@@ -102,8 +102,13 @@ class GeneralNewsFragment : Fragment(), OnRecyclerViewClick {
                                             it
                                         )
                                     recyclerViewGeneral.setHasFixedSize(true)
-                                    recyclerViewGeneral.layoutManager =
+                                    //vertical recycler view
+                                 recyclerViewGeneral.layoutManager =
                                         LinearLayoutManager(requireContext())
+
+                                    //HORIZONTAL recycler view
+                                 /* val layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,true)
+                                    recyclerViewGeneral.layoutManager = layoutManager */
 
                                     adapter =
                                         RecyclerAdapter(
